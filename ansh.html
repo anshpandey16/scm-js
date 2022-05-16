@@ -1,0 +1,227 @@
+<!-- /* class Car {
+constructor(brand) {
+this.carName = brand;
+}
+}
+myCar = new Car("Ford");
+document.getElementById("demo").innerHTML = "My car is a " + myCar.carName;
+// let name = prompt("what is your name?" , "guest");
+// console.log(name);
+/*let deletepost = confirm("do you really want that post to delete?");
+console.log(deletepost);
+if(deletepost){
+console.log("your post has been deleted successfully");
+}
+else{
+console.log("your post has not been deleted");
+}*/
+//let sum = (a, b) => a + b;
+//alert( sum(25,25) );
+/*let double = n => n * 2;
+alert( double(3)); */
+//let greet =(x)=> console.log(x);
+//greet('hello');
+/*let age = prompt("enter your age");
+let welcome=(age<18)? ()=>console.log('baby'):
+    ()=>console.log('Adult');
+    welcome();*/
+    /*let sum = (a, b) => { // the curly brace opens a multiline function
+    let result = a + b;
+    return result; // if we use curly braces, then we need an explicit "return"
+    };
+    alert(sum(1, 2)); */
+    /*var name = "global";
+
+    function scopeDemo() {
+    var name = "function";
+    console.log(name);
+    }
+    console.log(name);
+    scopeDemo();*/
+    /*const number = prompt("enter a number");
+    if(number>0){
+    console.log("the number is positive");
+    }
+    console.log ("the if statement is easy");*/
+    /*let sum = 0;
+    let number = parseInt(prompt('enter any number'));
+    while(number>=0){
+    sum += number;
+    number = parseInt(prompt('enter any number:'));
+    }
+    alert('The sum is'+" "+ sum);*/
+    /*let result;
+    const operator = prompt('enter operator (either +,-,* or /):');
+
+    const number1 = parseInt(prompt('ENTER first number:'));
+    const number2 = parseInt(prompt('enter second number:'));
+
+    switch (operator) {
+    case '+':
+    result = number1 + number2;
+    alert("a+b"+"="+result);
+    break;
+    case '-':
+    result = number1 - number2;
+    alert("a-b"+"="+result);
+    break;
+    case '*':
+    result = number1 * number2;
+    alert("a*b"+"="+result);
+    break;
+    case '/':
+    result = number1 / number2;
+    alert("a/b"+"="+result);
+    break;
+    default:
+    alert('Invalid operator');
+    break;
+    }*/
+    /*"use strict";
+    let x=3.14;
+    myFunction();
+    function myFunction(){
+    y=3.14;
+    }*/
+    // constructor function
+    // Person () {
+    // this.name = 'John',
+    // this.age = 23
+    // }
+
+    // // create an object
+    // const person = new Person();function
+    function Person () {
+    this.name = 'John',
+    this.age = 23,
+
+    this.greet = function () {
+    console.log('hello');
+    }
+    }
+
+    // create objects
+    const person1 = new Person();
+    const person2 = new Person();
+
+    // access properties
+    console.log(person1.name); // John
+    console.log(person2.name);
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <title>Import in ES6</title>
+    </head>
+
+    <body>
+        <script>
+            // import * as exp from "./export.js";
+
+            // // Use dot notation to access members
+            // console.log(exp.num_set);
+            // exp.hello();
+            // let g = new exp.Greeting("Aakash");
+            // console.log(g.greeting);
+//             let reg = /abc/g; //g means global
+//             console.log(reg);
+//             console.log(reg.source);
+// let s ="This is great code with abc and abc";
+// //Functions to match expressions
+// //exec()- This function will return an array for match or null for no match
+// let result = reg.exec(s);
+//             console.log(result);
+//             result = reg.exec(s);
+//             console.log(result);
+//             result = reg.exec(s);
+//             console.log(result);
+let reg =/This/g; //g means global
+let reg1 =/This/i; //i means case insensitivity
+console.log(reg);
+console.log(reg. source);
+let s="ThIs is great code with abc and abc";
+//Functions to match expressions
+//exec()- This function will return an array for match or null for no match
+let result = reg1.exec(s);
+console.log(result);
+console.log(result.input);//retrieves the complete input
+console.log(result.index); //retrieves index of reg
+
+        </script>
+    </body>
+
+    </html> -->
+<!-- <!DOCTYPE html>
+<html>
+
+<body>
+    <h2>JavaScript Regular Expressions</h2>
+    <p>The test() method returns true if it finds a match, otherwise false.</p>
+    <p>Search a string for the character "e":</p>
+    <p id="demo"></p>
+    <script>
+        //  let reg = /This/; //g means global
+        //  reg = /This/g;
+        //  console.log(reg);
+        //  let s = "This is great code with abc and This abc";
+        //  let result3 = s.match(reg);//right way
+        //  console.log(result3);
+        // let reg = /This/; //g means global
+        // console.log(reg);
+        // let s = "This is great code with abc";
+        // //search returns index of first match else -1
+        // let result4 = s.search(reg);//right way
+        // console.log(result4);
+        // let reg = /This/; //g means global
+        // console.log(reg);
+        // let s = "This is great code with abc";
+        // let s1 = " CR of g25 are of no use";
+        // //replace()- returns new replaced string  with all the replacements
+        // let result5 = s.replace(reg, 45);//right way
+        // console.log(result5);
+        // let result3 = s1.replace(reg, 6);
+        // console.log(result3);
+        var str = 'apple Red apple "orange" "green" avocado';
+        var f = /^a/g; //matches only at the beginning of the input
+        console.log(str.match(f));
+        var g = /o$/g; //matches only at the end of the input
+        console.log(str.match(g));
+        var h = /\ba/g; //matches only at a word boundary
+        console.log(str.match(h)); //a(apple),a(apple), a(avocado
+        var i = /\Bg/g; //matches only not at a word boundary
+        console.log(str.match(i)); //g (orange)
+
+
+
+    </script>
+</body>
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+</head>  
+<body style = "text-align: center; font-size: 20px;">  
+Enter a number: <input id = "number">  
+<br><br>  
+<button onclick = "fact1()"> Factorial </button>  
+<p id = "res"></p>  
+<script>  
+function fact(num)   
+{  
+if (num == 0) {  
+return 1;  
+}  
+else {  
+return num * fact( num - 1 );  
+}  
+}  
+function fact1()  
+{  
+var num = document.getElementById("number").value;  
+var f = fact(num);  
+document.getElementById("res").innerHTML="The factorial of the number " + num + " is: " + f ;  
+}  
+</script>  
+</body>  
+</html>*/
+
